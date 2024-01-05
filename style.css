@@ -107,3 +107,24 @@ main {
 
 /* FOOTER */
 
+.footer {
+    padding: 1.25em 2.25em;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(
+      90deg,
+      var(--clr-accent-dark) 1.18%,
+      var(--clr-accent-light) 100%
+    );
+    color: var(--clr-primary);
+  }
+  
+  .footerlink {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .footerlink:hover {
+    text-decoration: none;
+    color: inherit;
+  }
