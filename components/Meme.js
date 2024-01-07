@@ -3,8 +3,8 @@ import React from "react"
 // save the meme-related data as an object (meme)
 export default function Meme() {
     const [meme, setMeme] = React.useState({
-        topText: "One does not simply",
-        bottomText: "walk into Mordor",
+        topText: "",
+        bottomText: "",
         randomImage: "http://i.imgflip.com/1bij.jpg" 
     })
 // Create a state for all memes images. Leave blank to add to it.
@@ -28,16 +28,17 @@ export default function Meme() {
   function getMemeImage () {
     const randomNum = Math.floor(Math.random() * allMemes.length);
     const url = allMemes[randomNum].url;
-    setMeme((prevState) => {
-       return {...prevState,randomImage: url };
-  });
+    setMeme(prevMeme => ({
+       ...prevMeme,
+       randomImage: url 
+    }))
 }
 
 // Create a function to get ahold of the buttonclick event.  
-  function handleChange(event) {
-        const {name, value} = event.target
-        setMeme(prevState => ({
-            prevState,
+  function handleChange(e) {
+        const {name, value} = e.target
+        setMeme(prevMeme => ({
+            prevMeme,
             [name]: value
         }))
     }
