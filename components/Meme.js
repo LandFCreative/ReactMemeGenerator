@@ -34,12 +34,13 @@ export default function Meme() {
     }))
 }
 
-// Create a function to get ahold of the buttonclick event.  
-  function handleChange(e) {
-        const {name, value} = e.target
+// Create a function to get the text input  
+  function handleChange(event) {
+        const {name, value} = event.target
         setMeme(prevMeme => ({
-            prevMeme,
-            [name]: value
+            ...prevMeme,
+            // computer properties. Surround key in [] to change a dynamic string and use it as a property name in the object
+            [name]: value 
         }))
     }
 
