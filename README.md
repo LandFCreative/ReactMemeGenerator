@@ -1,6 +1,6 @@
 <h2> Scrimba React Project: Meme Generator</h2>
 
-<img src="./screenshots/Reactscreenshot.png" width=50%/>
+<img src="./screenshots/Reactscreenshot.png" width=70%/>
 
 <h3>Built with:</h3>
 <ul>
